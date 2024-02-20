@@ -1,0 +1,7 @@
+1. Show all images in the right spot
+2. Apply a mask to all images https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image
+3. Conditionally toggle the mask
+4. For each image, get a list of acceptabel psuedonyms
+5. If pseudonym matches, turn off mask
+6. Show sidebar with options to choose from
+7. Make it pretty
