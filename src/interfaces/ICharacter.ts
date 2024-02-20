@@ -8,4 +8,5 @@ export default interface ICharacter {
     h?: number; //height
     w?: number; // width
     src: string;
+    revealed?: boolean;
 }

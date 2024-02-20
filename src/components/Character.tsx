@@ -1,14 +1,19 @@
+import { useEffect, useState } from 'react';
 import '../App.css';
 import ICharacter from '../interfaces/ICharacter';
 
 function Character(props: ICharacter) {
-    let isRevealed = false;
+
+
+    const [isRevealed, setIsRevealed ] = useState(false);
+
+    useEffect( () => {
+        setIsRevealed(!!props.revealed)
+    }, [props.revealed]);
+
   return (
     <>
         <img className={isRevealed ? '' : 'unrevealed'} src={"images/" + props.src} alt={isRevealed ? props.name : ""}></img>
-        {/* {props.names.map( name => (
-            <li>{name}</li>
-        ))} */}
     </>
   );
 }
