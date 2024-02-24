@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: .9fr 5fr;
+  grid-template-rows: 0.2fr auto;
+  grid-template-areas: "sidebar main"
+                       "sidebar main";
 }
 
 .App-logo {
@@ -40,4 +45,39 @@
 img.unrevealed {
 /* mask-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%); */
 filter: brightness(0%);
+}
+
+
+div.outerContainer {
+  background-color: rebeccapurple;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr .7fr;
+  grid-template-areas: "mainStage"
+                       "guessBox";
+}
+
+div.mainStage {
+  background-color: #61dafb;
+  grid-area: "mainStage";
+}
+
+
+.guessBox {
+  grid-area: "guessBox";
+}
+
+.sidebar {
+  grid-area: "sidebar";
+  background-color: maroon;
+}
+
+/* Silhouette game title */
+.main {
+  grid-area: "main";
+  background-color: cadetblue;
+}
+
+h1 {
+  font-size: large;
 }

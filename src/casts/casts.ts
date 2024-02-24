@@ -6,18 +6,22 @@ export const sil1Cast: ICharacter[] =
     name: "Mr. Incredible",
     names: ["Bob", "Mr. Incredible"],
     containsNames: ["Incredible", "Parr", "Incredibles", "Robert"],
-    x: 5,
-    y: 6,
-    z: 0,
+    x: "5%",
+    y: 100,
+    z: 5,
+    w: 150,
+    h: 200,
     src: 'incredible.png'
 },
 {
     name: "Spongebob Squarepants",
     names: ["Spongebob", "Spongebob Squarepants"],
     containsNames: ["Sponge", "Square"],
-    x: 1,
-    y: 2,
-    z: 1,
+    x: "10%",
+    y: 100,
+    z: 4,
+    w: 150,
+    h: 150,
     src: 'sponge.png'
 },
 {
@@ -26,7 +30,7 @@ export const sil1Cast: ICharacter[] =
     containsNames: ["Halo", "Chief", "Cheif", "117"],
     x: 1,
     y: 2,
-    z: 1,
+    z: 10,
     src: 'masterChief.png'
 }
 ]

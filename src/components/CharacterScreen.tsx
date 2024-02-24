@@ -12,7 +12,7 @@ interface Props {
 function CharacterScreen(props: Props) {
  
   const [, updateState] = useState({});
-  const forceUpdate = useCallback( ()=> updateState({}), []);
+  const forceUpdate = useCallback( ()=> updateState({}), []); // hack
 
   const processGuess = function(guess: string) {
     const namesToReveal = CheckNames(guess, props.chars);
@@ -21,17 +21,25 @@ function CharacterScreen(props: Props) {
       if(namesToReveal.includes(char.name)) {
         char.revealed = true;
         forceUpdate();
-        alert(char.name);
       }
     });
   } 
  
   return (
     <>
-    {props.chars.map( (char, idx) => (
-      <Character key={idx} name={char.name} names={char.names} x={char.x} y={char.y} z={char.z} src={char.src} revealed={char.revealed} />
-      ))}
-    <InputBox handleGuess={processGuess}></InputBox>
+    <div className="outerContainer">
+
+
+      <div className="mainStage">
+        {props.chars.map( (char, idx) => (
+        <Character key={idx} name={char.name} names={char.names} x={char.x} y={char.y} z={char.z} w={char.w} h={char.h} src={char.src} revealed={char.revealed}  />
+        ))}
+      </div>
+
+        <div className='guessBox'>
+          <InputBox handleGuess={processGuess}></InputBox>
+        </div>
+    </div>
     </>
   );
 }

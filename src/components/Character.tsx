@@ -13,7 +13,7 @@ function Character(props: ICharacter) {
 
   return (
     <>
-        <img className={isRevealed ? '' : 'unrevealed'} src={"images/" + props.src} alt={isRevealed ? props.name : ""}></img>
+        <img className={isRevealed ? '' : 'unrevealed'} src={"images/" + props.src} alt={isRevealed ? props.name : ""} title={isRevealed ? props.name : ""} style={{left: props.x, bottom:props.y, position: 'absolute', height:'auto', width: 'auto', maxHeight: props.h, maxWidth: props.w, zIndex: props.z}}></img>
     </>
   );
 }
