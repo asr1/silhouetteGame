@@ -24,6 +24,13 @@ function CharacterScreen(props: Props) {
       }
     });
   } 
+
+  const giveUp = function() {
+    props.chars.forEach( (char) => {
+      char.revealed = true;
+      forceUpdate();
+    })
+  }
  
   return (
     <>
@@ -37,7 +44,7 @@ function CharacterScreen(props: Props) {
       </div>
 
         <div className='guessBox'>
-          <InputBox handleGuess={processGuess}></InputBox>
+          <InputBox handleGiveUp={giveUp} handleGuess={processGuess}></InputBox>
         </div>
     </div>
     </>

@@ -3,6 +3,7 @@ import '../App.css';
 
 interface Props {
     handleGuess: (guess: string)=> void;
+    handleGiveUp: ()=> void;
 }
 
 function InputBox(props: Props) {
@@ -21,6 +22,7 @@ function InputBox(props: Props) {
   return (
     <div className="InputBoxHolder">
         <h3>Guess a character</h3>
+            <button onClick={props.handleGiveUp}>Give Up</button>
         <form onSubmit={handleSubmit}>
             <input type="Text" value={text} onChange={handleChange}></input>
             <input type="submit" value="Guess"/>
